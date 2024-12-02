@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalender</title>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+    <header class="poppins-bold">
+        <h1>Kalender</h1>
+    </header>
+    <main class="container">
+        <section id="calendar">
+            <div class="navigation">
+                <button id="prevWeek" class="poppins-regular">Forrige uke</button>
+                <button id="nextWeek" class="poppins-regular">Neste uke</button>
+            </div>
+            <table id="bookingCalendar">
+                <thead>
+                    <tr class="poppins-bold">
+                        <th>Mandag</th>
+                        <th>Tirsdag</th>
+                        <th>Onsdag</th>
+                        <th>Torsdag</th>
+                        <th>Fredag</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Kalenderrader genereres dynamisk her -->
+                </tbody>
+            </table>
+        </section>
+    </main>
+    <footer class="poppins-regular">
+        <p>© 2024 Kalender</p>
+    </footer>
+    <script src="cal.js"></script>
+</body>
+</html>
