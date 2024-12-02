@@ -1,0 +1,145 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-image: url("./images/background2.jpg");
+    font-family: Arial, sans-serif;
+    height: 100%;
+    color: #caad84;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-size-adjust: 100%;
+    background-color: #FFF7F1; 
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
+    height: 115px;
+}
+.logo {
+    max-width: 115px;
+    height: auto;
+    margin-right: 5px; 
+}
+.social-icon {
+    width: 30px;
+    height: 30px;
+    margin-top: 15px; 
+    margin-bottom: 15px;
+}
+.tab {
+    display: flex;
+    align-self: center;
+    justify-content: space-between;
+}
+.content {
+    padding: 10px;
+    background: white;
+    filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.1));
+    margin: 0;
+    text-size-adjust: 100%;
+    text-align: right; 
+}
+.additional-content {
+    padding: 5px;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+.additional-content h2 {
+    font-size: smaller;
+    position: center;
+    color: black;
+    margin-bottom: 5px;
+}
+.additional-content h1{
+    font-size: x-large;
+    color : black;
+    margin-bottom: 5px;
+}
+.additional-content p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    color: black;
+}
+.nav {
+    display: flex;
+    gap: 15px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    justify-content: space-evenly; 
+    flex-grow: 1;
+}
+
+.nav li {
+    list-style: none;
+}
+
+.nav a {
+    height: 50px;
+    line-height: 50px;
+    font-size: 22px;
+    justify-content: space-between;
+    font-weight: 550;
+    color: black;
+    text-decoration: none;
+    padding: 0 10px;
+    white-space: nowrap; 
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); 
+    text-decoration: none;
+    margin-left: 5px;
+    transition: all 0.3s ease; /* Smooth transition for hover effect */
+}
+.nav a:hover {
+    color: white; /* Change icon color on hover */
+    background-color: #333; /* Optional: Change background color on hover */
+    border-radius: 5px; /* Optional: Add rounded corners */
+    padding: 5px; /* Optional: Add padding */
+}
+.footer {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #FFF7F1;
+    padding: 10px;
+    margin-top: 20px;
+    position: fixed;
+    height: 25px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    font-size: 1rem;
+    font-weight: 550;
+    color: black;
+}
+.footer p {
+    margin: 0;
+    display: flex;
+    align-items: center; 
+}
+
+.footer a {
+    color: white;
+    text-decoration: none;
+    margin-left: 5px; 
+}
+
+@media (max-width: 480px) {
+    /* Styles for phones */
+    .header {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .nav {
+      flex-direction: column;
+    }
+  
+    .nav a {
+      padding: 10px 0;
+    }
+  
+    .logo {
+      max-width: 100px;
+    }
+  }
