@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<!--
+    Gallery by Odd
+    Foreløpige bilder er bare tatt som et eksempel.
+-->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Craftsvilla Gallery</title>
+    <style>
+        .gallery
+        {
+            border: 1px solid #ccc;
+        }
+
+        .gallery:hover 
+        {
+            border: 1px solid #777;
+        }
+
+        .gallery img 
+        {
+            width: 100%;
+            height: auto;
+        }
+
+        .desc
+        {
+            padding: 15px;
+            text-align: center;
+        }
+        
+        *
+        {
+            box-sizing: border-box;
+        }
+
+        .responsive
+        {
+            padding: 0 6px;
+            float: left;
+            width: 24.9999%;
+        }
+
+        @media only screen and (max-width: 700px)
+        {
+            .responsive
+            {
+                width: 49.99999%;
+                margin: 6px 0;
+            }
+        }
+
+        @media only screen and (max-width: 500px)
+        {
+            .responsive
+            {
+                width: 100%;
+            }
+        }
+        .clearfix::after
+        {
+            content: "";
+            display: table;
+            clear: both;
+        }
+        
+        /* */
+    </style>
+</head>
+<body>
+    <div class="responsive">
+        <div class="gallery">
+            <a target="_blank" href="img/Art - Kier in Sight Archives on Unsplash.jpg" target="_blank">
+                <img src="img/Art - Kier in Sight Archives on Unsplash.jpg" alt="Chains." width="600" height="400">
+            </a>
+            <div class="desc">Chains all over the place.</div>
+        </div>
+    </div>
+    <div class="responsive">
+        <div class="gallery">
+            <a target="_blank" href="img/Art - Magdaline John on Unsplash.jpg" target="_blank">
+                <img src="img/Art - Magdaline John on Unsplash.jpg" alt="Magdaline John on Unsplash." width="600" height="400">
+            </a>
+            <div class="desc">Chains all over the place.</div>
+        </div>
+    </div>
+    <div class="responsive">
+        <div class="gallery">
+            <a target="_blank" href="img/Art - Phil Hearing on Unsplash.jpg" target="_blank">
+                <img src="img/Art - Phil Hearing on Unsplash.jpg" alt="Phil Hearing on Unsplash." width="600" height="400">
+            </a>
+            <div class="desc">Chains all over the place.</div>
+        </div>
+    </div>
+    <div class="responsive">
+        <div class="gallery">
+            <a target="_blank" href="img/Art- Tuyen Vo on Unsplash.jpg" target="_blank">
+                <img src="img/Art- Tuyen Vo on Unsplash.jpg" alt="Tuyen Vo on Unsplash." width="600" height="400">
+            </a>
+            <div class="desc">Chains all over the place.</div>
+        </div>
+    </div>
+    <div class="responsive">
+        <div class="gallery">
+            <a href="img/Art - RhondaK Native Florida Folk Artist on Unsplash.jpg" target="_blank">
+                <img src="img/Art - RhondaK Native Florida Folk Artist on Unsplash.jpg" alt="" width="600" height="400">
+            </a>
+        </div>
+        <div class="desc">Another image, how wonderful!</div>
+    </div>
+    <div class="responsive">
+        <div class="gallery">
+            <a href="img/Art - Arno Senoner on Unsplash.jpg" target="_blank">
+                <img src="img/Art - Arno Senoner on Unsplash.jpg" alt="what">
+            </a>
+        </div>
+    </div>
+</body>
+</html>
