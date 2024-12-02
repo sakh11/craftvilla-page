@@ -32,6 +32,38 @@ body {
     align-self: center;
     justify-content: space-between;
 }
+.content-wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: left;
+    justify-content: left;
+    gap: 20px;
+}
+.main-content {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    width: 70%;
+}
+.scroll-container {
+    background-color: #333;
+    overflow: hidden; 
+    padding: 15px;
+    max-width: 300px;
+    max-height: calc(100vh - 150px);
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    left: 0;
+    align-items: center;
+    justify-content: flex-start;
+}
+.scroll-container img {
+    width: 100%;
+    height: auto;
+    padding: 10px 0;
+    max-width: 100%;
+}
 .content {
     padding: 10px;
     background: white;
