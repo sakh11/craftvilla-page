@@ -1,0 +1,117 @@
+/* Grunnleggende styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* background-image: url('./Img/bilde2.png'); /* Bakgrunnsbilde for hele siden */
+    /* background-size: cover; /* Sørger for at bildet dekker hele bakgrunnen */
+    /* background-attachment: fixed; /* Gjør at bildet ikke scroller med siden */
+    /* background-position: center; /* Plasserer bildet i midten */
+    
+}
+
+/* Header styling */
+header {
+   /*  background-image: url('./Img/header.png'); /* Bakgrunnsbilde for headeren */
+   /*  background-size: cover; /* Sørger for at bildet dekker headeren */
+   /*  background-position: center; /* Plasserer bildet sentralt */
+   /*  background-color: rgba(0, 0, 0, 0.5); /* Svart bakgrunn med 50 % gjennomsiktighet */
+   /*  background-blend-mode: overlay; /* Kombinerer bakgrunnsbildet med svart bakgrunn */
+    color: white;
+    padding: 16px;
+    text-align: center;
+    width: 100%;
+    box-sizing: border-box;
+    height: 200px; /* Angir høyde på headeren */
+    display: flex;
+    flex-direction: column; /* Plasserer innholdet under hverandre */
+    justify-content: center;
+    align-items: center; /* Sentrerer tekst horisontalt */
+}
+
+header h1 {
+    font-size: 32px; /* Standard font-størrelse */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Legger til en myk skygge på teksten */
+}
+
+@media (min-width: 768px) {
+    header h1 {
+        font-size: 64px; /* Dobbel størrelse for større skjermer */
+    }
+}
+
+/* Skjema-kort styling */
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 24px; /* Avstand mellom kort */
+    margin: 32px auto;
+    padding: 16px;
+    max-width: 1200px;
+    box-sizing: border-box;
+}
+
+.form-card {
+    background: white;
+    padding: 24px;
+    border-radius: 8px; /* Runde hjørner */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Myk skygge */
+    width: 100%;
+    max-width: 400px; /* Maks bredde for skjema */
+    box-sizing: border-box;
+}
+
+.form-card h2 {
+    margin-bottom: 16px;
+    color: #6200ea;
+    text-align: center;
+    font-size: 24px; /* Fontstørrelse for overskriften */
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-bottom: 8px;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+input, textarea, button {
+    margin-bottom: 16px;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px; /* Runde hjørner for inputfeltene */
+    font-size: 16px;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+button {
+    background-color: #6200ea; /* Lilla farge for knappen */
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #3700b3; /* Mørkere lilla ved hover */
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 8px;
+    }
+    .form-card {
+        width: 100%;
+    }
+}
