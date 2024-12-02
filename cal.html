@@ -4,37 +4,161 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kalender</title>
-    <link rel="stylesheet" href="/styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        h1 {
+            margin-top: 20px;
+        }
+        #calendar {
+            display: grid;
+            grid-template-columns: repeat(6, 1fr);
+            gap: 10px;
+            margin: 20px 0;
+        }
+        .day-column {
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            overflow: hidden;
+        }
+        .day-header {
+            background-color: #f5f5f5;
+            padding: 10px;
+            text-align: center;
+            font-weight: bold;
+        }
+        .time-slot {
+            padding: 10px;
+            text-align: center;
+            cursor: pointer;
+            background-color: #fff;
+        }
+        .time-slot.booked {
+            background-color: #ccc;
+            pointer-events: none;
+        }
+        #controls {
+            display: flex;
+            gap: 10px;
+        }
+        button {
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+    </style>
 </head>
 <body>
-    <header class="poppins-bold">
-        <h1>Kalender</h1>
-    </header>
-    <main class="container">
-        <section id="calendar">
-            <div class="navigation">
-                <button id="prevWeek" class="poppins-regular">Forrige uke</button>
-                <button id="nextWeek" class="poppins-regular">Neste uke</button>
-            </div>
-            <table id="bookingCalendar">
-                <thead>
-                    <tr class="poppins-bold">
-                        <th>Mandag</th>
-                        <th>Tirsdag</th>
-                        <th>Onsdag</th>
-                        <th>Torsdag</th>
-                        <th>Fredag</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <!-- Kalenderrader genereres dynamisk her -->
-                </tbody>
-            </table>
-        </section>
-    </main>
-    <footer class="poppins-regular">
-        <p>© 2024 Kalender</p>
-    </footer>
-    <script src="cal.js"></script>
+    <h1>Kalender</h1>
+    <div id="controls">
+        <button id="prev-week" disabled>Forrige uke</button>
+        <button id="next-week">Neste uke</button>
+    </div>
+    <div id="calendar"></div>
+
+    <div id="booking-modal" style="display: none;">
+        <form id="booking-form">
+            <h2>Book en time</h2>
+            <p id="booking-time"></p>
+            <label>Fornavn: <input type="text" id="first-name" required></label><br><br>
+            <label>Etternavn: <input type="text" id="last-name" required></label><br><br>
+            <label>E-post: <input type="email" id="email" required></label><br><br>
+            <button type="submit">Bekreft</button>
+            <button type="button" id="cancel-booking">Avbryt</button>
+        </form>
+    </div>
+
+    <script>
+        const calendar = document.getElementById('calendar');
+        const prevWeekBtn = document.getElementById('prev-week');
+        const nextWeekBtn = document.getElementById('next-week');
+        const bookingModal = document.getElementById('booking-modal');
+        const bookingForm = document.getElementById('booking-form');
+        const bookingTime = document.getElementById('booking-time');
+        const cancelBookingBtn = document.getElementById('cancel-booking');
+
+        const workHours = { start: 9, end: 15 };
+        const maxWeeksAhead = 4;
+
+        let currentWeekOffset = 0;
+        const bookings = {};
+
+        function renderCalendar() {
+            calendar.innerHTML = '';
+            const today = new Date();
+            const startOfWeek = new Date();
+            startOfWeek.setDate(today.getDate() - today.getDay() + 1 + currentWeekOffset * 7);
+
+            for (let day = 0; day < 5; day++) {
+                const dayColumn = document.createElement('div');
+                dayColumn.classList.add('day-column');
+
+                const dayDate = new Date(startOfWeek);
+                dayDate.setDate(dayDate.getDate() + day);
+                const dayHeader = document.createElement('div');
+                dayHeader.classList.add('day-header');
+                dayHeader.innerText = `${dayDate.toLocaleDateString('no-NO', { weekday: 'long', day: 'numeric', month: 'short' })}`;
+                dayColumn.appendChild(dayHeader);
+
+                for (let hour = workHours.start; hour <= workHours.end; hour++) {
+                    const timeSlot = document.createElement('div');
+                    const timeKey = `${dayDate.toISOString().split('T')[0]} ${hour}:00`;
+                    timeSlot.classList.add('time-slot');
+                    timeSlot.innerText = `${hour}:00`;
+                    if (bookings[timeKey]) {
+                        timeSlot.classList.add('booked');
+                    } else {
+                        timeSlot.addEventListener('click', () => openBookingModal(timeKey));
+                    }
+                    dayColumn.appendChild(timeSlot);
+                }
+                calendar.appendChild(dayColumn);
+            }
+
+            prevWeekBtn.disabled = currentWeekOffset <= 0;
+            nextWeekBtn.disabled = currentWeekOffset >= maxWeeksAhead;
+        }
+
+        function openBookingModal(timeKey) {
+            bookingTime.innerText = `Ønsker du å booke ${timeKey}?`;
+            bookingForm.dataset.timeKey = timeKey;
+            bookingModal.style.display = 'block';
+        }
+
+        function closeBookingModal() {
+            bookingModal.style.display = 'none';
+        }
+
+        bookingForm.addEventListener('submit', (event) => {
+            event.preventDefault();
+            const timeKey = bookingForm.dataset.timeKey;
+            bookings[timeKey] = {
+                firstName: document.getElementById('first-name').value,
+                lastName: document.getElementById('last-name').value,
+                email: document.getElementById('email').value
+            };
+            closeBookingModal();
+            renderCalendar();
+        });
+
+        cancelBookingBtn.addEventListener('click', closeBookingModal);
+
+        prevWeekBtn.addEventListener('click', () => {
+            currentWeekOffset--;
+            renderCalendar();
+        });
+
+        nextWeekBtn.addEventListener('click', () => {
+            currentWeekOffset++;
+            renderCalendar();
+        });
+
+        renderCalendar();
+    </script>
 </body>
 </html>
