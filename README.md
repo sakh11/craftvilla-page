@@ -1,2 +1,4 @@
-# craftvilla-page
+# CRAFTSVILLA
 Craftvilla - A group project
+
+Contributors
