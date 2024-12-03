@@ -1,120 +1,134 @@
 <!DOCTYPE html>
-<!--
-    Gallery by Odd
-    Foreløpige bilder er bare tatt som et eksempel.
--->
+<!-- Treg nedlasting av bilder pga store bildefiler.-->
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Craftsvilla Gallery</title>
+    <title>Art Gallery</title>
     <style>
-        .gallery
-        {
-            border: 1px solid #ccc;
+        body {
+            font-family: 'Georgia', serif; /* Basic af, det e jo første dagen, after all. */ 
+            margin: 0;
+            padding: 0;
+            background-color: #caad84;
+            color: #333;
         }
 
-        .gallery:hover 
-        {
-            border: 1px solid #777;
+        h1 {
+            text-align: center;
+            font-size: 2.5em;
+            margin: 20px 0;
+            color: #444;
         }
 
-        .gallery img 
-        {
+        .gallery-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 15px;
+        }
+
+        .artwork {
+            position: relative;
+            margin: 15px;
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            overflow: hidden;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .artwork:hover {
+            transform: scale(1.10);
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .artwork img {
             width: 100%;
-            height: auto;
+            height: 70%;
+            display: block;
+            border-bottom: 1px solid #ddd;
         }
 
-        .desc
-        {
+        .artwork .details {
             padding: 15px;
             text-align: center;
         }
-        
-        *
-        {
-            box-sizing: border-box;
+
+        .details h2 {
+            font-size: 1.2em;
+            margin: 10px 0;
         }
 
-        .responsive
-        {
-            padding: 0 6px;
-            float: left;
-            width: 24.9999%;
+        .details p {
+            font-size: 0.9em;
+            color: #666;
+            line-height: 1.5;
         }
 
-        @media only screen and (max-width: 700px)
-        {
-            .responsive
-            {
-                width: 49.99999%;
-                margin: 6px 0;
+        /* Responderer dette til mobil layout? */
+        .artwork {
+            flex: 0 0 calc(24% - 30px); /* fire gjenstander per rad. */
+        }
+
+        @media only screen and (max-width: 768px) {
+            .artwork {
+                flex: 0 0 calc(49% - 30px); /* to gjenstander per rad. */
             }
         }
 
-        @media only screen and (max-width: 500px)
-        {
-            .responsive
-            {
-                width: 100%;
+        @media only screen and (max-width: 500px) {
+            .artwork {
+                flex: 0 0 calc(99% - 30px); /* en gjenstand per rad. */
             }
         }
-        .clearfix::after
-        {
-            content: "";
-            display: table;
-            clear: both;
-        }
-        
-        /* */
     </style>
 </head>
 <body>
-    <div class="responsive">
-        <div class="gallery">
-            <a target="_blank" href="img/Art - Kier in Sight Archives on Unsplash.jpg" target="_blank">
-                <img src="img/Art - Kier in Sight Archives on Unsplash.jpg" alt="Chains." width="600" height="400">
-            </a>
-            <div class="desc">Chains all over the place.</div>
+    <h1>Craftsvilla Gallery</h1>
+    <div class="gallery-container">
+        <div class="artwork">
+            <img src="images/img/Art - Kier in Sight Archives on Unsplash.jpg" alt="Chains Art">
+            <div class="details">
+                <h2>Kier in Sight Archives.</h2>
+                <p>Captured by Kier, LeBlanc loves those chains!</p>
+            </div>
         </div>
-    </div>
-    <div class="responsive">
-        <div class="gallery">
-            <a target="_blank" href="img/Art - Magdaline John on Unsplash.jpg" target="_blank">
-                <img src="img/Art - Magdaline John on Unsplash.jpg" alt="Magdaline John on Unsplash." width="600" height="400">
-            </a>
-            <div class="desc">Chains all over the place.</div>
+        <div class="artwork">
+            <img src="images/img/Art - Magdaline John on Unsplash.jpg" alt="Abstract Artwork">
+            <div class="details">
+                <h2>Magdaline John</h2>
+                <p>Amazing handcrafting. Gwen is pretty jealous ngl.</p>
+            </div>
         </div>
-    </div>
-    <div class="responsive">
-        <div class="gallery">
-            <a target="_blank" href="img/Art - Phil Hearing on Unsplash.jpg" target="_blank">
-                <img src="img/Art - Phil Hearing on Unsplash.jpg" alt="Phil Hearing on Unsplash." width="600" height="400">
-            </a>
-            <div class="desc">Chains all over the place.</div>
+        <div class="artwork">
+            <img src="images/img/Art - Phil Hearing on Unsplash.jpg" alt="Phil Hearing Artwork">
+            <div class="details">
+                <h2>Phil Hearing</h2>
+                <p>Fingerpainting! :)</p>
+            </div>
         </div>
-    </div>
-    <div class="responsive">
-        <div class="gallery">
-            <a target="_blank" href="img/Art- Tuyen Vo on Unsplash.jpg" target="_blank">
-                <img src="img/Art- Tuyen Vo on Unsplash.jpg" alt="Tuyen Vo on Unsplash." width="600" height="400">
-            </a>
-            <div class="desc">Chains all over the place.</div>
+        <div class="artwork">
+            <img src="images/img/Art- Tuyen Vo on Unsplash.jpg" alt="Tuyen Vo Artwork">
+            <div class="details">
+                <h2>Tuyen Vo</h2>
+                <p>This is amazing.</p>
+            </div>
         </div>
-    </div>
-    <div class="responsive">
-        <div class="gallery">
-            <a href="img/Art - RhondaK Native Florida Folk Artist on Unsplash.jpg" target="_blank">
-                <img src="img/Art - RhondaK Native Florida Folk Artist on Unsplash.jpg" alt="" width="600" height="400">
-            </a>
+        <div class="artwork">
+            <img src="images/img/Art - RhondaK Native Florida Folk Artist on Unsplash.jpg" alt="RhondaK art">
+            <div class="details">
+                <h2>RhondaK</h2>
+                <p>Insane picturetaking of paintbrushes!</p>
+            </div>
         </div>
-        <div class="desc">Another image, how wonderful!</div>
-    </div>
-    <div class="responsive">
-        <div class="gallery">
-            <a href="img/Art - Arno Senoner on Unsplash.jpg" target="_blank">
-                <img src="img/Art - Arno Senoner on Unsplash.jpg" alt="what">
-            </a>
+        <div class="artwork">
+            <img src="images/img/Art - Arno Senoner on Unsplash.jpg" alt="Senoner be cool">
+            <div class="details">
+                <h2>Arno Senoner.</h2>
+                <p>Senoner</p>
+            </div>
         </div>
     </div>
 </body>
