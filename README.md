@@ -1,4 +1,8 @@
 # CRAFTSVILLA
-Craftvilla - A group project
+Craftvilla - A group project (Group A)
 
-Contributors
+Contributors:
+Stian K
+Arvid
+Ean
+Odd
