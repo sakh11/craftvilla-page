@@ -209,6 +209,7 @@ main {
 /* Content container text */
 .about-text-paragraph {
   font-size: 20px;
+  padding: 20px 10px;
 }
 /* /Content container text */
 
@@ -253,10 +254,36 @@ main {
 }
 /* /Image container position */
 
+/* Container Image container */
+.about-text-paragraph-image {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* /Container Image container */
+
+/* About page map container */
+.about-map-container {
+  height: 100%;
+  width: 100%;
+ }
+/* /About page map container */
+
+  /* About page map */
+  #about-page-map {
+    width: 100%; 
+    height: 100%;
+    border-radius: 0px 10px 10px 0px;
+  }
+/* /About page map */
+
+
 /* Container image */
 .about-text-paragraph-image img {
-  object-fit: contain;
-  height: auto;
+  object-fit: cover;
+  height: 100%;
   width: 100%;
 }
 /* /Container image */
@@ -272,16 +299,6 @@ main {
 /* /Container image rounded corners */
 
 /* /About Text Containers */
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -403,6 +420,196 @@ main {
 
 
 /* Media Query for responsiveness */
+
+@media (max-width: 2000px) {
+
+  /* Content container title */
+  .about-text-paragraph-title {
+    font-size: 30px;
+  }
+  /* /Content container title */
+
+  /* Content container text */
+  .about-text-paragraph {
+    font-size: 16px;
+  }
+  /* /Content container text */
+
+  /* Booking button */
+  .about-booking-button {
+    padding: 10px 20px;
+    font-size: 14px;
+  }
+
+}
+
+
+@media (max-width: 1760px) {
+
+  /* Content container title */
+  .about-text-paragraph-title {
+    font-size: 24px;
+  }
+  /* /Content container title */
+
+  /* Content container text */
+  .about-text-paragraph {
+    font-size: 12px;
+  }
+  /* /Content container text */
+
+}
+
+@media (max-width: 1440px) {
+  
+/* About image container */
+  .about-image {
+    height: 400px;
+  }
+
+  .about-text-section-container {
+    padding: 20px 20px;
+  }
+
+  /* About image active */
+  .about-image.active {
+    flex: 1;
+  }
+
+  .section.about-image {
+    background-position-x: 100px;
+    background-position-y: 100px;
+  }
+
+  .about-image {
+    height: 500px;
+    box-shadow: 0 0 2.5px 1px transparent;
+  }
+
+  /* About header images */
+  #about-image-1 {
+    background: url("https://images.pexels.com/photos/3090832/pexels-photo-3090832.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+    /* background-position-y: -25px; */
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  #about-image-2 {
+    display: none;
+  }
+
+  #about-image-3 {
+    display: none;
+  }
+
+  #about-image-4 {
+    display: none;
+  }
+
+  #about-image-5 {
+    display: none;
+  }
+
+  /* Booking button */
+  .about-booking-button {
+    padding: 5px 10px;
+    font-size: 12px;
+  }
+
+}
+
+
+@media (max-width: 900px) {
+
+  /* Main */
+  main {
+    width: 100%;
+    max-width: 1728px;
+    height: auto;
+    padding: 50px 10px;
+  }
+  /* /Main */
+
+  /* Universal Section Style */
+  .section {
+    width: 100%;
+    max-width: 100vw;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+  }
+  /* /Universal Section Style */
+
+    /* Text container position */
+  .about-text-section-container.left-side {
+    grid-column: 1 / 3;
+    grid-row: 2;
+  }
+
+  .about-text-section-container.right-side {
+    grid-column: 1 / 3;
+    grid-row: 2;
+  }
+  /* /Text container position */
+
+  /* Image container position */
+  .about-text-paragraph-image.left-side {
+    grid-column: 1 / 3;
+    grid-row: 1;
+  }
+
+  .about-text-paragraph-image.right-side {
+    grid-column: 1 / 3;
+    grid-row: 1;
+  }
+
+  /* Container image rounded corners */
+  .about-text-paragraph-image.left-side img {
+    border-radius: 10px 10px 0px 0px;
+  }
+
+  .about-text-paragraph-image.right-side img {
+    border-radius: 10px 10px 0px 0px;
+  }
+  /* /Container image rounded corners */
+
+
+  /* Content container title */
+  .about-text-paragraph-title {
+    font-size: 32px;
+  }
+  /* /Content container title */
+
+  /* Content container text */
+  .about-text-paragraph {
+    font-size: 16px;
+  }
+  /* /Content container text */
+
+  .about-text-section-container a {
+    width: 100%;
+    height: 75px;
+  }
+
+  /* Booking button */
+  .about-booking-button {
+    padding: 5px 10px;
+    font-size: 16px;
+    width: 100%;
+    height: 100%;
+  }
+
+  #about-page-map {
+    height: 500px;
+    border-radius: 10px 10px 0px 0px;
+  }
+
+}
+
 
 @media (max-width: 480px) {
   /* Styles for phones */
