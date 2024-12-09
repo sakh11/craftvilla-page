@@ -9,74 +9,100 @@ body {
     background-color: #caad84;
 }
 
-/* Header-stil */
+/* Header */
 header {
     background-color: #FFF7F1;
-    color: rgb(0, 0, 0);
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    padding: 16px 20px;
-    height: 115px;
-    position: relative;
+    padding: 10px 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .header-left {
-    position: absolute;
-    left: 20px;
-    top: 50%;
-    transform: translateY(-50%);
     display: flex;
     align-items: center;
     gap: 15px;
 }
 
 .logo {
-    height: 150px;
-    width: auto;
+    max-width: 115px;
+    height: auto;
+    margin-right: 5px;
 }
 
 .company-name {
-    font-size: 2rem;
+    font-size: x-large;
     font-weight: bold;
 }
 
-header h1 {
-    margin: 0;
-    font-size: 3rem;
-    text-align: center;
+/* Navigasjonsmeny */
+.nav {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-/* Container for kontaktkort */
-.container {
+.nav ul {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    flex-direction: row;
+    gap: 20px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav li a {
+    height: 50px;
+  line-height: 50px;
+  font-size: 22px;
+  justify-content: space-between;
+  font-weight: 550;
+  color: black;
+  text-decoration: none;
+  padding: 0 10px;
+  white-space: nowrap; 
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); 
+  text-decoration: none;
+  margin-left: 5px;
+  transition: all 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.nav li a:hover {
+    background-color: #333;
+    color: white;
+}
+
+/* Kontaktkort */
+.container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsiv layout */
     gap: 24px;
     padding: 32px;
-    max-width: 1200px;
-    margin: 0 auto;
 }
 
-/* Stil for individuelle kort */
 .form-card {
-    background: #fff;
+    background: #fff; /* Bakgrunnsfarge for kortene */
     padding: 24px;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    width: calc(50% - 24px);
-    max-width: 400px;
-    box-sizing: border-box;
+    border-radius: 8px; /* Runde hjørner */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Skygge for dybde */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-card:hover {
+    transform: translateY(-5px); /* Løfter kortet litt ved hover */
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2); /* Større skygge ved hover */
 }
 
 h2 {
+    color: #8b2525; /* Farge for overskrifter på kort */
     margin-bottom: 16px;
-    color: #8b2525;
     text-align: center;
 }
 
-/* Stil for inputs, textarea og knapper */
-input, textarea, button {
+/* Inputs og textarea */
+input, textarea {
     margin-bottom: 16px;
     padding: 12px;
     border: 1px solid #ccc;
@@ -84,6 +110,12 @@ input, textarea, button {
     font-size: 16px;
     width: calc(100% - 16px);
     box-sizing: border-box;
+    background-color: #f9f9f9;
+}
+
+input:focus, textarea:focus {
+    border-color: #8b2525; /* Marker farge ved fokus */
+    outline: none;
 }
 
 /* Knappstil */
@@ -91,23 +123,22 @@ button {
     background-color: #caad84;
     color: white;
     border: none;
-    cursor: pointer;
+    border-radius: 4px;
+    padding: 12px;
     font-size: 16px;
+    cursor: pointer;
+    width: 100%;
+    transition: background-color 0.3s ease;
 }
 
 button:hover {
-    background-color: #5f1a1a;
+    background-color: #8b2525;
 }
 
-/* Styrkeindikator */
-#password-strength {
-    margin-top: 8px;
-    font-size: 14px;
-}
-
-/* Footer-stil */
+/* Footer */
 .footer {
-    background-color: white;
+    background-color: #FFF7F1;
+    color: black;
     text-align: center;
     padding: 16px;
     border-top: 1px solid #ccc;
@@ -121,7 +152,7 @@ button:hover {
 }
 
 .social-icon {
-    width: 20px;
-    height: 20px;
-    margin-left: 5px;
+    width: 25px;
+    height: 25px;
+    margin-left: 10px;
 }
