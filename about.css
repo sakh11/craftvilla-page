@@ -120,41 +120,45 @@ main {
   overflow: hidden;
 }
 
+/* About image container */
 .about-image {
-  height: 800px;
+  height: 680px;
   flex: 1;
   margin: 5px;
   cursor: pointer;
   border-radius: 5px;
   background-size: cover;
-  background-position: center;
+  background-position: start;
   background-repeat: no-repeat;
   position: relative;
   transition: flex 0.4s ease-in 0.1s;
+  box-shadow: 0 0 2.5px 1px #111;
 }
 
+/* About image active */
 .about-image.active {
-  flex: 2;
+  flex: 5;
 }
 
+/* About header images */
 #about-image-1 {
-  background: url("https://images.pexels.com/photos/5302906/pexels-photo-5302906.jpeg?auto=compress&cs=tinysrgb&w=600");
+  background: url("https://images.pexels.com/photos/25682484/pexels-photo-25682484/free-photo-of-close-up-of-people-with-their-hands-painted-with-variety-of-colors.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
 }
 
 #about-image-2 {
-  background: url("https://images.pexels.com/photos/4706134/pexels-photo-4706134.jpeg?auto=compress&cs=tinysrgb&w=600");
+  background: url("https://images.pexels.com/photos/29670757/pexels-photo-29670757/free-photo-of-traditional-wooden-masks-display-in-hoi-an.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
 }
 
 #about-image-3 {
-  background: url("https://images.pexels.com/photos/5760846/pexels-photo-5760846.jpeg?auto=compress&cs=tinysrgb&w=600");
+  background: url("https://images.pexels.com/photos/29633903/pexels-photo-29633903/free-photo-of-crafting-holiday-wreath-with-pinecones-and-berries.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
 }
 
 #about-image-4 {
-  background: url("https://images.pexels.com/photos/5089152/pexels-photo-5089152.jpeg?auto=compress&cs=tinysrgb&w=600");
+  background: url("https://images.pexels.com/photos/4219654/pexels-photo-4219654.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
 }
 
 #about-image-5 {
-  background: url("https://images.pexels.com/photos/7585822/pexels-photo-7585822.jpeg?auto=compress&cs=tinysrgb&w=600");
+  background: url("https://images.pexels.com/photos/6694344/pexels-photo-6694344.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
 }
 
 /* /About Image Container */
@@ -181,7 +185,7 @@ main {
   align-items: center;
   justify-content: center;
   margin-top: 50px;
-  background-color: #f0d3b0;
+  background-color: #FFF7F1;
   border-radius: 10px;
   box-shadow: 0 0 5px 1px #222;
   }
@@ -213,10 +217,15 @@ main {
   padding: 20px 40px;
   border-radius: 5px;
   border: none;
-  background-color: #98b858;
-  color: white;
+  background-color: #f0d3b0;
+  color: #222;
   font-size: 18px;
   cursor: pointer;
+}
+
+.about-booking-button:hover {
+  background-color: #503e29;
+  color: white;
 }
 /* /Booking button */
 
