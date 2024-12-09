@@ -76,8 +76,12 @@ html, body {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+  background-attachment: fixed;
   height: 100%;
   width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 /* /Document */
 
@@ -87,6 +91,7 @@ main {
   width: 100%;
   max-width: 1728px;
   height: auto;
+  padding: 50px 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -129,7 +134,7 @@ main {
 }
 
 .about-image.active {
-  flex: 4;
+  flex: 2;
 }
 
 #about-image-1 {
@@ -155,12 +160,16 @@ main {
 /* /About Image Container */
 
 
-/* About Text Container */
+/* About Text Containers */
+
+/* Title */
 .about-text-title {
   padding: 2rem 4rem;
   font-size: 48px;
 }
+/* /Title */
 
+/* Content containers */
 .about-text-section {
   display: flex;
   flex-direction: column;
@@ -172,24 +181,58 @@ main {
   align-items: center;
   justify-content: center;
   margin-top: 50px;
-  padding: 50px 0; 
-}
+  background-color: #f0d3b0;
+  border-radius: 10px;
+  box-shadow: 0 0 5px 1px #222;
+  }
 
+.about-text-section-container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: start;
+  padding: 80px 50px;
+}
+/* /Content containers */
+
+/* Content container title */
+.about-text-paragraph-title {
+  font-size: 38px;
+}
+/* /Content container title */
+
+/* Content container text */
 .about-text-paragraph {
-  padding: 2.5rem;
   font-size: 20px;
 }
+/* /Content container text */
 
-.about-text-paragraph.left-side {
+/* Booking button */
+.about-booking-button {
+  padding: 20px 40px;
+  border-radius: 5px;
+  border: none;
+  background-color: #98b858;
+  color: white;
+  font-size: 18px;
+  cursor: pointer;
+}
+/* /Booking button */
+
+/* Text container position */
+.about-text-section-container.left-side {
   grid-column: 1 / 2;
   grid-row: 1;
 }
 
-.about-text-paragraph.right-side {
+.about-text-section-container.right-side {
   grid-column: 2 / 3;
   grid-row: 1;
 }
+/* /Text container position */
 
+/* Image container position */
 .about-text-paragraph-image.left-side {
   grid-column: 1 / 2;
   grid-row: 1;
@@ -199,32 +242,27 @@ main {
   grid-column: 2 / 3;
   grid-row: 1;
 }
+/* /Image container position */
 
-.about-text-paragraph-image {
-  background-size: auto;
-  height: 500px;
-  border-radius: 10px;
+/* Container image */
+.about-text-paragraph-image img {
+  object-fit: contain;
+  height: auto;
+  width: 100%;
+}
+/* /Container image */
+
+/* Container image rounded corners */
+.about-text-paragraph-image.left-side img {
+  border-radius: 10px 0px 0px 10px;
 }
 
-#about-text-paragraph-image-1 {
-  background: url("./assets/images/eight.jpg");
+.about-text-paragraph-image.right-side img {
+  border-radius: 0px 10px 10px 0px;
 }
+/* /Container image rounded corners */
 
-#about-text-paragraph-image-2 {
-  background: url("./assets/images/ten.jpg");
-}
-
-#about-text-paragraph-image-3 {
-  background: url("./assets/images/three.jpg");
-}
-
-#about-text-paragraph-image-4 {
-  background: url("./assets/images/two.jpg")
-}
-
-/* /About Text Container */
-
-
+/* /About Text Containers */
 
 
 
@@ -247,6 +285,7 @@ main {
   background-color: #FFF7F1; 
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
   height: 115px;
+  width: 100%;
 }
 .logo {
   max-width: 115px;

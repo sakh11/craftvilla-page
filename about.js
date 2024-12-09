@@ -1,7 +1,7 @@
 const aboutImage = document.querySelectorAll(".about-image");
+
 aboutImage.forEach(parameter => {
     parameter.addEventListener("click", () => {
-        //Get the panel that was clicked
         removeActiveClasses();
         parameter.classList.add("active");
     })
