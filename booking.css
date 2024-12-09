@@ -1,0 +1,205 @@
+/* Grunnleggende stil */
+body {
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: #caad84;
+}
+
+/* Header */
+header {
+    background-color: #FFF7F1;
+    color: rgb(0, 0, 0);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 20px;
+    height: 115px;
+    position: relative;
+}
+
+.header-left {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.logo {
+    height: 150px;
+    width: auto;
+}
+
+.company-name {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.header-right {
+    position: absolute;
+    top: 50%; /* Plasserer midt på skjermen vertikalt */
+    left: 50%; /* Plasserer midt på skjermen horisontalt */
+    transform: translate(-50%, -50%); /* Flytter midtpunktet til midten */
+    text-align: center; /* Sentrerer teksten horisontalt */
+}
+
+.header-right h1 {
+    margin: 0;
+    font-size: 3rem; /* Standard fontstørrelse */
+    font-size: clamp(2rem, 5vw, 4rem); /* Dynamisk størrelse basert på skjermbredden */
+}
+
+
+
+.language-switch {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+#language-button {
+    background-color: #d5ba99;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    padding: 8px 16px;
+    cursor: pointer;
+    font-family: "Poppins", sans-serif;
+    font-size: 1rem;
+}
+
+#language-button:hover {
+    background-color: #caad84;
+}
+
+/* Main innhold */
+main {
+    flex: 1;
+}
+
+#controls {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+button,
+#cancel-button {
+    padding: 10px 20px;
+    background-color: #d5ba99;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    cursor: pointer;
+    font-family: "Poppins", sans-serif;
+}
+
+button:hover,
+#cancel-button:hover {
+    background-color: #caad84;
+}
+
+#calendar {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 10px;
+    padding: 0 20px;
+}
+
+.day-column {
+    border: 1px solid #d5ba99;
+    border-radius: 5px;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column; /* Sørger for at elementene stables */
+    align-items: center; /* Sentrerer innhold horisontalt */
+    justify-content: start; /* Justerer startpunkt for innholdet */
+    text-align: center; /* Sentrerer tekst */
+    padding: 10px;
+}
+
+.day-column > div {
+    width: 100%; /* Sørger for at dagene dekker hele kolonnen */
+}
+
+.time-slot {
+    padding: 10px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center; /* Sentrerer tekst horisontalt */
+    align-items: center; /* Sentrerer tekst vertikalt */
+    text-align: center;
+    border: 1px solid transparent; /* Kan brukes for hover-effekter */
+    width: 100%; /* Tilpasser ruten til bredden av kolonnen */
+    box-sizing: border-box; /* Inkluder padding og border i totalbredde */
+}
+
+.day-column > div:first-child {
+    font-weight: bold; /* Gjør teksten fet */
+    text-transform: capitalize; /* Sørger for stor forbokstav */
+    text-align: center; /* Sentraliserer teksten horisontalt */
+    margin-bottom: 10px; /* Legger til litt avstand under dagen */
+}
+
+
+.time-slot:hover {
+    background-color: #d5ba99;
+    color: white;
+}
+
+.time-slot.booked {
+    background-color: #e74c3c; /* Rød farge for bestilte timer */
+    color: white;
+    cursor: not-allowed;
+}
+
+/* Bookingmodal */
+#booking-modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+    z-index: 1000;
+    display: none;
+    width: 300px;
+}
+
+#booking-modal input {
+    width: calc(100% - 10px);
+    padding: 5px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-family: "Poppins", sans-serif;
+}
+
+/* Footer */
+.footer {
+    background-color: white;
+    text-align: center;
+    padding: 16px;
+    border-top: 1px solid #ccc;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.social-icon {
+    width: 20px;
+    height: 20px;
+    margin-left: 5px;
+}

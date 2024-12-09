@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <meta name="Theam-color" content="#de8b16"> -->
+    <title>Kontakt oss</title>
+    <link rel="stylesheet" href="contact.css">
+
+     <!-- Favicon -->
+     <link rel="icon" href="../images/logo1.png" type="image/x-icon">
+     
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="header-left">
+            <img src="../images/logo.png" alt="CraftsVilla Logo" class="logo">
+            <span class="company-name">CraftsVilla!</span>
+        </div>
+        <div class="header-right">
+            <h1 class="poppins-bold">Kontakt oss</h1>
+        </div>
+    </header>
+
+    <!-- Hovedinnhold -->
+    <main>
+        <div class="container">
+            <!-- Kontaktkort: Ny kunde -->
+            <div class="form-card">
+                <h2 class="poppins-bold">Ny kunde</h2>
+                <form action="#" method="post">
+                    <label for="signup-name">Fullt Navn</label>
+                    <input type="text" id="signup-name" name="signup-name" placeholder="Skriv inn ditt navn" required>
+                    <label for="signup-email">E-post</label>
+                    <input type="email" id="signup-email" name="signup-email" placeholder="Skriv inn din e-post" required>
+                    <label for="signup-password">Passord</label>
+                    <input type="password" id="signup-password" name="signup-password" placeholder="Skriv inn ditt passord" required autocomplete="new-password">
+                    <div id="password-strength"></div>
+                    <button type="submit">Registrer deg</button>
+                </form>
+            </div>
+
+            <!-- Kontaktkort: Min side -->
+            <div class="form-card">
+                <h2 class="poppins-bold">Min Side</h2>
+                <form action="#" method="post">
+                    <label for="signin-email">E-post</label>
+                    <input type="email" id="signin-email" name="signin-email" placeholder="Skriv inn din e-post" required>
+                    <label for="signin-password">Passord</label>
+                    <input type="password" id="signin-password" name="signin-password" placeholder="Skriv inn ditt passord" required>
+                    <button type="submit">Logg inn</button>
+                </form>
+            </div>
+
+            <!-- Kontaktkort: Tilbakemelding -->
+            <div class="form-card">
+                <h2 class="poppins-bold">Noe å klage på?</h2>
+                <form action="#" method="post">
+                    <label for="feedback-name">Ditt Navn</label>
+                    <input type="text" id="feedback-name" name="feedback-name" placeholder="Skriv inn ditt navn">
+                    <label for="feedback-message">Din Tilbakemelding</label>
+                    <textarea id="feedback-message" name="feedback-message" rows="4" placeholder="Mer svada?"></textarea>
+                    <button type="submit">Send Tilbakemelding</button>
+                </form>
+            </div>
+
+            <!-- Kontaktkort: Kontakt -->
+            <div class="form-card">
+                <h2 class="poppins-bold">Kontakt oss</h2>
+                <form action="#" method="post">
+                    <label for="contact-name">Ditt Navn</label>
+                    <input type="text" id="contact-name" name="contact-name" placeholder="Skriv inn ditt navn" required>
+                    <label for="contact-email">E-post</label>
+                    <input type="email" id="contact-email" name="contact-email" placeholder="Skriv inn din e-post" required>
+                    <label for="contact-message">Melding</label>
+                    <textarea id="contact-message" name="contact-message" rows="4" placeholder="Skriv din melding" required></textarea>
+                    <button type="submit">Send Melding</button>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <p>
+                Facebook:
+                <a href="https://www.facebook.com" target="_blank">
+                    <img src="../images/facebook.png" alt="Facebook" class="social-icon">
+                </a>
+            </p>
+            <p>
+                Instagram:
+                <a href="https://www.instagram.com" target="_blank">
+                    <img src="../images/instagram.png" alt="Instagram" class="social-icon">
+                </a>
+            </p>
+            <p>Smedasundet 66, 5528 Haugesund - Norway</p>
+            <p>&copy; 2024 A GROUP-A PROJECT. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="contact.js"></script>
+</body>
+</html>

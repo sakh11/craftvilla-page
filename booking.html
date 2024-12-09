@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalender</title>
+
+    <!-- Favicon -->
+    <link rel="icon" href="../images/logo1.png" type="image/x-icon">
+
+    <!-- CSS-fil -->
+    <link rel="stylesheet" href="booking.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="header-left">
+            <img src="../images/logo.png" alt="CraftsVilla Logo" class="logo">
+            <span class="company-name" data-lang-key="companyName">CraftsVilla!</span>
+        </div>
+        <div class="header-right">
+            <h1 class="poppins-bold" data-lang-key="mainTitle">Timebestilling</h1>
+        </div>
+        <div class="language-switch">
+            <button id="language-button" class="poppins-regular">English</button>
+        </div>
+    </header>
+
+    <!-- Hovedinnhold -->
+    <main>
+        <div id="controls">
+            <button id="prev-week" class="poppins-regular" data-lang-key="prevWeek" disabled>Forrige uke</button>
+            <button id="next-week" class="poppins-regular" data-lang-key="nextWeek">Neste uke</button>
+            <a href="../home.html" id="cancel-button" class="poppins-regular" data-lang-key="cancel">Avbestilling</a>
+        </div>
+        <div id="calendar"></div>
+
+        <!-- Bookingmodal -->
+        <div id="booking-modal" style="display: none;">
+            <form id="booking-form">
+                <h2 data-lang-key="bookTime">Book en time</h2>
+                <p id="booking-time"></p>
+                <label data-lang-key="firstName">Fornavn:</label>
+                <input type="text" id="first-name" required><br>
+                <label data-lang-key="lastName">Etternavn:</label>
+                <input type="text" id="last-name" required><br>
+                <label data-lang-key="email">E-post:</label>
+                <input type="email" id="email" required><br>
+                <button type="submit" data-lang-key="confirm">Bekreft</button>
+                <button type="button" id="cancel-booking" data-lang-key="cancel">Avbryt</button>
+            </form>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <p>
+                Facebook:
+                <a href="https://www.facebook.com" target="_blank">
+                    <img src="../images/facebook.png" alt="Facebook" class="social-icon">
+                </a>
+            </p>
+            <p>
+                Instagram:
+                <a href="https://www.instagram.com" target="_blank">
+                    <img src="../images/instagram.png" alt="Instagram" class="social-icon">
+                </a>
+            </p>
+            <p data-lang-key="address">Smedasundet 66, 5528 Haugesund - Norge</p>
+            <p data-lang-key="rights">&copy; 2024 A GROUP-A PROJECT. Alle rettigheter reservert.</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="booking.js"></script>
+</body>
+</html>

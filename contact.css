@@ -1,0 +1,127 @@
+/* Grunnleggende stil */
+body {
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: #caad84;
+}
+
+/* Header-stil */
+header {
+    background-color: #FFF7F1;
+    color: rgb(0, 0, 0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 16px 20px;
+    height: 115px;
+    position: relative;
+}
+
+.header-left {
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.logo {
+    height: 150px;
+    width: auto;
+}
+
+.company-name {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 3rem;
+    text-align: center;
+}
+
+/* Container for kontaktkort */
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 24px;
+    padding: 32px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Stil for individuelle kort */
+.form-card {
+    background: #fff;
+    padding: 24px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: calc(50% - 24px);
+    max-width: 400px;
+    box-sizing: border-box;
+}
+
+h2 {
+    margin-bottom: 16px;
+    color: #8b2525;
+    text-align: center;
+}
+
+/* Stil for inputs, textarea og knapper */
+input, textarea, button {
+    margin-bottom: 16px;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    width: calc(100% - 16px);
+    box-sizing: border-box;
+}
+
+/* Knappstil */
+button {
+    background-color: #caad84;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #5f1a1a;
+}
+
+/* Styrkeindikator */
+#password-strength {
+    margin-top: 8px;
+    font-size: 14px;
+}
+
+/* Footer-stil */
+.footer {
+    background-color: white;
+    text-align: center;
+    padding: 16px;
+    border-top: 1px solid #ccc;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.social-icon {
+    width: 20px;
+    height: 20px;
+    margin-left: 5px;
+}
