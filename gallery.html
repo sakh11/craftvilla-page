@@ -4,132 +4,104 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Art Gallery</title>
-    <style>
-        body {
-            font-family: 'Georgia', serif; /* Basic af, det e jo første dagen, after all. */ 
-            margin: 0;
-            padding: 0;
-            background-color: #caad84;
-            color: #333;
-        }
-
-        h1 {
-            text-align: center;
-            font-size: 2.5em;
-            margin: 20px 0;
-            color: #444;
-        }
-
-        .gallery-container {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            padding: 15px;
-        }
-
-        .artwork {
-            position: relative;
-            margin: 15px;
-            background-color: #fff;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-            overflow: hidden;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-
-        .artwork:hover {
-            transform: scale(1.10);
-            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
-        }
-
-        .artwork img {
-            width: 100%;
-            height: 70%;
-            display: block;
-            border-bottom: 1px solid #ddd;
-        }
-
-        .artwork .details {
-            padding: 15px;
-            text-align: center;
-        }
-
-        .details h2 {
-            font-size: 1.2em;
-            margin: 10px 0;
-        }
-
-        .details p {
-            font-size: 0.9em;
-            color: #666;
-            line-height: 1.5;
-        }
-
-        /* Responderer dette til mobil layout? */
-        .artwork {
-            flex: 0 0 calc(24% - 30px); /* fire gjenstander per rad. */
-        }
-
-        @media only screen and (max-width: 768px) {
-            .artwork {
-                flex: 0 0 calc(49% - 30px); /* to gjenstander per rad. */
-            }
-        }
-
-        @media only screen and (max-width: 500px) {
-            .artwork {
-                flex: 0 0 calc(99% - 30px); /* en gjenstand per rad. */
-            }
-        }
-    </style>
+    <title>CraftsVilla Gallery</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="gallery.css">
+    <link rel="icon" href="/images/favicon.ico" type="image/x-icon"> 
 </head>
 <body>
-    <h1>Craftsvilla Gallery</h1>
+    <header>
+        <div class="header">
+            <a href="./home.html"><img src="./images/logo.png" alt="image" class="logo"></a>
+            <div id="google_translate_element" class="translate"></div>
+            <div class="title">
+                <h1>CraftsVilla!</h1>
+            </div>
+            <ul class="nav poppins-light">
+                <li><a href="./home.html">Home</a></li>
+                <li><a href="./gallery.html">Gallery</a></li>
+                <li><a href="./cal.html">Booking</a></li>
+                <li><a href="./contact.html">Contact</a></li> 
+                <li><a href="./about.html">About</a></li>
+            </ul>
+        </div>
+    </header>
+    <p class="subtitle">Art Gallery - Art made by our participants.</p>
     <div class="gallery-container">
         <div class="artwork">
-            <img src="images/img/Art - Kier in Sight Archives on Unsplash.jpg" alt="Chains Art">
+            <img src="images/gallery&about/one.jpg" alt="Caroline painting">
             <div class="details">
-                <h2>Kier in Sight Archives.</h2>
-                <p>Captured by Kier, LeBlanc loves those chains!</p>
+                <h2>Caroline, painting.</h2>
+                <p>Caroline is painting on a small canvas in our workshop, using one of our kits.</p>
             </div>
         </div>
         <div class="artwork">
-            <img src="images/img/Art - Magdaline John on Unsplash.jpg" alt="Abstract Artwork">
+            <img src="images/gallery&about/two.jpg" alt="Caroline painting">
             <div class="details">
-                <h2>Magdaline John</h2>
-                <p>Amazing handcrafting. Gwen is pretty jealous ngl.</p>
+                <h2>Caroline, painting.</h2>
+                <p>Top-down picture of her painting. Very nice!</p>
             </div>
         </div>
         <div class="artwork">
-            <img src="images/img/Art - Phil Hearing on Unsplash.jpg" alt="Phil Hearing Artwork">
+            <img src="images/gallery&about/three.jpg" alt="Curated Clay cups">
             <div class="details">
-                <h2>Phil Hearing</h2>
-                <p>Fingerpainting! :)</p>
+                <h2>Curated clay cups, Week 49</h2>
+                <p>Tuesday, 3rd of December, our workshop-attendees made these cups!</p>
             </div>
         </div>
         <div class="artwork">
-            <img src="images/img/Art- Tuyen Vo on Unsplash.jpg" alt="Tuyen Vo Artwork">
+            <img src="images/gallery&about/four.jpg" alt="Liv Karen is drawing">
             <div class="details">
-                <h2>Tuyen Vo</h2>
-                <p>This is amazing.</p>
+                <h2>Liv Karen is drawing</h2>
+                <p>Our loyal workshop-hero, Liv Karen doing what she does best!</p>
             </div>
         </div>
         <div class="artwork">
-            <img src="images/img/Art - RhondaK Native Florida Folk Artist on Unsplash.jpg" alt="RhondaK art">
+            <img src="images/gallery&about/five.jpg" alt="Corey is painting">
             <div class="details">
-                <h2>RhondaK</h2>
-                <p>Insane picturetaking of paintbrushes!</p>
+                <h2>Corey is painting</h2>
+                <p>Corey is painting an abstract painting</p>
             </div>
         </div>
         <div class="artwork">
-            <img src="images/img/Art - Arno Senoner on Unsplash.jpg" alt="Senoner be cool">
+            <img src="images/gallery&about/six.jpg" alt="Senoner be cool">
             <div class="details">
-                <h2>Arno Senoner.</h2>
-                <p>Senoner</p>
+                <h2>Corey doing big things</h2>
+                <p>Corey's canvas was too big, he had to place it on the floor!</p>
+            </div>
+        </div>
+        <div class="artwork">
+            <img src="images/gallery&about/seven.jpg" alt="The crown is damn'd heavy.">
+            <div class="details">
+                <h2>Corey painting on floor, again</h2>
+                <p>Another massive work by Corey.</p>
+            </div>
+        </div>
+        <div class="artwork">
+            <img src="images/gallery&about/ten.jpg" alt="The client definitely asked for this.">
+            <div class="details">
+                <h2>Emma clay-working</h2>
+                <p>Emma prepares the clay to make cups.</p>
             </div>
         </div>
     </div>
+    <br><br>
+    <footer class="footer"> 
+        <div class="footer">
+            <p>Facebook: <a rel="noopener" href="https://www.facebook.com/artncraftidea/" target="_blank"><img src="./images/facebook.png" alt="Facebook" class="social-icon"></a></p>
+            <p>Instagram: <a rel="noopener" href="https://www.instagram.com/art_and_craft9888/?hl=en" target="_blank"><img src="./images/instagram.png" alt="Instagram" class="social-icon"></a></p>
+            <p>Smedasundet 66, 5528 Haugesund - Norway</p>
+            <p>&copy; 2024 A GRPUP-A PROJECT. All rights reserved.</p>
+        </div>
+    </footer>
+    <div id="popup" class="popup hidden">
+        <div class="popup-content">
+            <span id="popup-close" class="popup-close">&times;</span>
+            <img id="popup-image" src="" alt="">
+            <div id="popup-details" class="popup-details"></div>
+        </div>
+    </div>
+    <script src="gallery.js"></script>
 </body>
 </html>
