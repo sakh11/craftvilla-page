@@ -12,19 +12,30 @@
 <body>
     <!-- Header and Navbar -->
     <div class="header">
-        <a href="./home.html"> <img src="./images/logo.png" alt="image" class="logo"> </a>
+        <a href="./index.html"><img src="./images/logo.png" alt="image" class="logo"></a>
+        <div id="google_translate_element" class="translate"></div>
         
-        <div class="additional-content">
+        <div class="cart-icon">
+            <img src="./images/cart.png" alt="Cart">
+            <span id="cart-count">0</span>
+        </div>
+
+        <div class="cart-dropdown" id="cart-dropdown">
+            <ul id="cart-items"></ul>
+            <p>Total Items: <span id="total-items">0</span></p>
+            <p>Total Price: <span id="total-price">0</span>kr</p>
+        </div>
+
+        <div class="title">
             <h1>CraftsVilla!</h1>
         </div>
-        
-        <ul class="nav">
-            <li><a href="./about.html">About</a></li>
-            <li><a href="./gallery.html">Gallery</a></li>       
-            <li><a href="./contact.html">Contact</a></li> 
+        <ul class="nav poppins-light">
+            <li><a href="./gallery.html">Gallery</a></li>
             <li><a href="./booking.html">Booking</a></li>
+            <li><a href="./contact.html">Contact</a></li> 
+            <li><a href="./about.html">About</a></li>
         </ul>
-    </div>
+    </div>  
     <!-- /Header and Navbar -->
 
     <!-- Main container -->
@@ -141,8 +152,8 @@
 <!-- Footer -->
 <footer class="footer"> 
     <div class="footer">
-        <p>Facebook: <a href="https://www.facebook.com/artncraftidea/" target="_blank"><img src="./images/facebook.png" alt="Facebook" class="social-icon"></a> </p>
-        <p>Instagram: <a href="https://instagram.com/sploinkymusic.wav" target="_blank"> <img src="./images/instagram.png" alt="Instagram" class="social-icon"> </a> </p>
+        <p>Facebook: <a href="https://www.facebook.com/artncraftidea/" target="_blank"><img src="./images/facebook.png" alt="Facebook" class="social-icon"></a></p>
+        <p>Instagram: <a href="https://www.instagram.com/art_and_craft9888/?hl=en" target="_blank"><img src="./images/instagram.png" alt="Instagram" class="social-icon"></a></p>
         <p>Smedasundet 66, 5528 Haugesund - Norway</p>
         <p>&copy; 2024 A GRPUP-A PROJECT. All rights reserved.</p>
     </div>
