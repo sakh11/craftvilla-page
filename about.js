@@ -85,5 +85,4 @@ function googleTranslateElementInit() {
         includedLanguages: 'en,no,da,sv,uk,ar',
         layout: google.translate.TranslateElement.InlineLayout.SIMPLE
     }, 'google_translate_element');
-}
-});
+};

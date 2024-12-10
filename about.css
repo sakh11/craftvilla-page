@@ -376,13 +376,6 @@ main {
   padding: 5px;
 }
 
-.social-icon {
-  width: 30px;
-  height: 30px;
-  margin-top: 15px; 
-  margin-bottom: 15px;
-}
-
 .header {
   display: flex;
   align-items: center;
@@ -414,20 +407,6 @@ main {
   margin: 15px 0;
 }
 
-.tab {
-  display: flex;
-  align-self: center;
-  justify-content: space-between;
-}
-
-.content-wrapper {
-  display: flex;
-  flex-direction: column; /* Change to column to stack elements vertically */
-  align-items: flex-start;
-  justify-content: flex-start;
-  gap: 20px;
-  width: 100%; 
-}
 .cart-icon {
   position: absolute;
   top: 40px;
@@ -485,13 +464,11 @@ main {
 }
 
 .cart-dropdown {
-  max-height: 90vh; /* Ensure it doesn't exceed the viewport height */ 
+  max-height: 90vh; /* Ensure it doesn't exceed the viewport height */
   margin-top: 165px; ;
 }
 
 /* /Navbar */
-
-
 
 
 /* Footer */
