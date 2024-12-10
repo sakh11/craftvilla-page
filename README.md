@@ -2,4 +2,5 @@
 Craftvilla - A group project (Group A)
 
 Contributors:
-Stian K, Arvid, Ean & Odd
+Stian K | @sakh11, Arvid | @ArvidKodehode, Ean | @PopeDrex & Odd | @oddpre
+
