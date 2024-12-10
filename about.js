@@ -86,17 +86,4 @@ function googleTranslateElementInit() {
         layout: google.translate.TranslateElement.InlineLayout.SIMPLE
     }, 'google_translate_element');
 }
-
-document.addEventListener("DOMContentLoaded", function () {
-    const scrollContainer = document.querySelector(".scroll-container");
-    let scrollSpeed = 1; // Adjust scroll speed if needed
-            
-    function autoScroll() {
-        scrollContainer.scrollLeft += scrollSpeed;
-        if (scrollContainer.scrollLeft >= scrollContainer.scrollWidth - scrollContainer.clientWidth - 1) {
-            scrollContainer.scrollLeft = 0;
-        }
-    }
-            
-    setInterval(autoScroll, 40);
 });
